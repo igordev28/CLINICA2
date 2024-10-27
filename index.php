@@ -125,5 +125,48 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </form>
         <div class="agreement"><a href="#">DOUTOR IGOR SANTOS</a></div>
     </div>
+    <div class="container mt-5">
+    <div class="heading">Cadastro de Paciente</div>
+    <form class="form" method="POST" id="registrationForm">
+        <!-- Formulário de Cadastro -->
+        <!-- (mantido conforme o exemplo anterior) -->
+    </form>
+    <div class="agreement"><a href="#">DOUTOR IGOR SANTOS</a></div>
+    
+    <h2 class="mt-5">Pacientes Cadastrados</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome Completo</th>
+                <th>Data de Nascimento</th>
+                <th>E-mail</th>
+                <th>Telefone</th>
+                <th>Endereço</th>
+                <th>Sexo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            // Consulta para buscar os pacientes cadastrados
+            $stmt = $pdo->query("SELECT * FROM pacientes");
+            $pacientes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            foreach ($pacientes as $paciente) {
+                echo "<tr>
+                        <td>{$paciente['id']}</td>
+                        <td>{$paciente['nome']}</td>
+                        <td>{$paciente['data_nascimento']}</td>
+                        <td>{$paciente['email']}</td>
+                        <td>{$paciente['telefone']}</td>
+                        <td>{$paciente['endereco']}</td>
+                        <td>{$paciente['sexo']}</td>
+                    </tr>";
+            }
+            ?>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
 </body>
 </html>
