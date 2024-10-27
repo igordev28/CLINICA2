@@ -1,23 +1,22 @@
 .container {
-    max-width: 350px;
-    background: #f8f9fd;
-    background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(244, 247, 251) 100%);
-    border-radius: 40px;
-    padding: 25px 35px;
-    border: 5px solid rgb(255, 255, 255);
-    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
-    margin: 20px;
+    max-width: 800px; /* Largura máxima para o contêiner */
+    margin: auto; /* Centraliza o contêiner */
+    padding: 20px;
 }
 
 .heading {
-    text-align: center;
-    font-weight: 900;
-    font-size: 30px;
+    text-align: left;
+    font-weight: 1000;
+    font-size: 40px;
     color: rgb(16, 137, 211);
 }
 
 .form {
     margin-top: 20px;
+    background: #f8f9fd; /* Cor de fundo do formulário */
+    border-radius: 20px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    box-shadow: rgba(133, 189, 215, 0.5) 0px 10px 20px -10px; /* Sombra leve */
 }
 
 .form .input {
@@ -31,29 +30,22 @@
     border-inline: 2px solid transparent;
 }
 
-.form .input::-moz-placeholder {
-    color: rgb(170, 170, 170);
+.patient-list {
+    background: #ffffff; /* Fundo branco */
+    border-radius: 20px; /* Bordas arredondadas */
+    padding: 15px; /* Espaçamento interno */
+    box-shadow: rgba(133, 189, 215, 0.5) 0px 10px 20px -10px; /* Sombra leve */
+    margin-top: 20px; /* Espaçamento acima da lista */
 }
 
-.form .input::placeholder {
-    color: rgb(170, 170, 170);
+.table {
+    width: 100%; /* Largura total da tabela */
+    border-collapse: collapse; /* Colapsa as bordas */
 }
 
-.form .input:focus {
-    outline: none;
-    border-inline: 2px solid #12b1d1;
-}
-
-.form .forgot-password {
-    display: block;
-    margin-top: 10px;
-    margin-left: 10px;
-}
-
-.form .forgot-password a {
-    font-size: 11px;
-    color: #0099ff;
-    text-decoration: none;
+.table th, .table td {
+    padding: 10px; /* Espaçamento nas células */
+    border: 1px solid #ddd; /* Borda leve nas células */
 }
 
 .form .login-button {
@@ -78,16 +70,4 @@
 .form .login-button:active {
     transform: scale(0.95);
     box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 15px 10px -10px;
-}
-
-.agreement {
-    display: block;
-    text-align: center;
-    margin-top: 15px;
-}
-
-.agreement a {
-    text-decoration: none;
-    color: #0099ff;
-    font-size: 9px;
 }
