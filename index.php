@@ -19,12 +19,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $valores['endereco'] = trim($_POST['endereco']);
     $valores['sexo'] = $_POST['sexo'];
 
-    // Valida Nome Completo
+    
+
+    
     if (empty($valores['nomeCompleto'])) {
         $erros['nomeCompleto'] = 'O nome completo é obrigatório.';
     }
 
-    // Valida Data de Nascimento
+   
     $dataNascimento = new DateTime($valores['dataNascimento']);
     $hoje = new DateTime();
     $idade = $hoje->diff($dataNascimento)->y;
@@ -33,27 +35,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $erros['dataNascimento'] = 'Você deve ser maior de idade para se cadastrar.';
     }
 
-    // Valida E-mail
+    
     if (!filter_var($valores['email'], FILTER_VALIDATE_EMAIL)) {
         $erros['email'] = 'Formato de e-mail inválido.';
     }
 
-    // Valida Telefone
+   
     if (!preg_match('/^[0-9]{10,11}$/', $valores['telefone'])) {
         $erros['telefone'] = 'O telefone deve conter 10 ou 11 dígitos.';
     }
 
-    // Valida Endereço
+    
     if (empty($valores['endereco'])) {
         $erros['endereco'] = 'O endereço é obrigatório.';
     }
 
-    // Valida Sexo
+    
     if (empty($valores['sexo'])) {
         $erros['sexo'] = 'Por favor, selecione seu sexo.';
     }
 
-    // Se não houver erros, processa os dados (armazenamento, envio, etc.)
+    
     if (empty($erros)) {
         echo '<div class="alert alert-success">Cadastro realizado com sucesso!</div>';
         $valores = array_fill_keys(array_keys($valores), '');
@@ -70,12 +72,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="style.css">
     <title>Formulário de Cadastro</title>
     <style>
-        /* Estilização atualizada */
+      
        
     </style>
 </head>
 <body>
-    <div class="container mt-5">
+<div class="container mt-5">
         <div class="heading">Cadastro de Paciente</div>
         <form class="form" method="POST" id="registrationForm">
             <div class="form-group">
@@ -121,7 +123,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
             <button type="submit" class="login-button">Cadastrar</button>
         </form>
-        <div class="agreement"><a href="#">Aprenda sobre o acordo de licença do usuário</a></div>
+        <div class="agreement"><a href="#">DOUTOR IGOR SANTOS</a></div>
     </div>
 </body>
 </html>
