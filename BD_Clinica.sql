@@ -1,6 +1,6 @@
-CREATE DATABASE clinica;
+CREATE DATABASE clinica2;
 
-USE clinica;
+USE clinica2;
 
 CREATE TABLE pacientes (
     id INT AUTO_INCREMENT PRIMARY KEY,

@@ -1,15 +1,14 @@
 <?php
-$host = '127.0.0.1:3306';
-$db = 'clinica'; 
+$host = 'localhost:3306'; 
 $user = 'root'; 
-$pass = 'jones'; 
-$charset = 'utf8mb4';
+$password = 'cimatec'; 
+$database = 'clinica2'; 
 
-// Cria a conexão
-$conn = new mysqli($host, $user, $pass, $db);
 
-// Verifica a conexão
+$conn = new mysqli($host, $user, $password, $database);
+
+
 if ($conn->connect_error) {
-    die("Falha na conexão: " . $conn->connect_error);
+    die("Erro de conexão: " . $conn->connect_error);
 }
 ?>
