@@ -71,3 +71,26 @@
     transform: scale(0.95);
     box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 15px 10px -10px;
 }
+
+
+.table {
+    margin-top: 20px; /* Espaço acima da tabela */
+}
+
+.table th {
+    background-color: rgb(16, 137, 211);
+    color: white;
+    text-align: center; 
+}
+
+.table td {
+    vertical-align: middle; 
+}
+
+.table tr:hover {
+    background-color: #f1f1f1; /* Cor de fundo ao passar o mouse sobre a linha */
+}
+
+.table .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f8f9fa; /* Cor de fundo para linhas ímpares */
+}
